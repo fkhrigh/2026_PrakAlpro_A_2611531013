@@ -7,8 +7,7 @@ dua baris atau lebih
 print("Hello World")
 print()
 print("Program ini  menghasilkan")
-print("Program ini menghasilkan")
 print("Empat baris output")
 print("/ \\ // \\\\ /// \\\\\\")
 print("program ini" + "dibuat oleh a\n"
-+ "nama dan nim")
++ "Fakhri Al Ghifari Busra dan 2611531013")
