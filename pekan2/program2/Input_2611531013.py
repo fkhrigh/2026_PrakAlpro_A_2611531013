@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Buat program untuk menghitung luas persegi panjang
 # Nama variabel ditambah 4 digit nim terakhir contoh: panjang 1234
 # Program ini menggunakan fungsi input() untuk meminta pengguna
@@ -8,4 +9,16 @@ panjang_1013 = input('Masukkan nilai panjang: ')
 lebar_1013 = input('Masukkan nilai lebar: ')
 
 luas_1013 = int(panjang_1013) * int(lebar_1013)
+=======
+# Buat program untuk menghitung luas persegi panjang
+# Nama variabel ditambah 4 digit nim terakhir contoh: panjang 1234
+# Program ini menggunakan fungsi input() untuk meminta pengguna
+# Memasukkan nilai panjang dan lebar persegi panjang.
+# Nilai yang dimasukkan akan dikonversi menjadi tipe data integer
+
+panjang_1013 = input('Masukkan nilai panjang: ')
+lebar_1013 = input('Masukkan nilai lebar: ')
+
+luas_1013 = int(panjang_1013) * int(lebar_1013)
+>>>>>>> d6afa4043101782e980e2489c7e034d529665c13
 print("Luas = ", luas_1013)
