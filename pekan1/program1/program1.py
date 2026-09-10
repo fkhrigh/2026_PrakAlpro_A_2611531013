@@ -9,5 +9,5 @@ print()
 print("Program ini  menghasilkan")
 print("Empat baris output")
 print("/ \\ // \\\\ /// \\\\\\")
-print("program ini" + "dibuat oleh a\n"
+print("program ini" + "dibuat oleh \n"
 + "Fakhri Al Ghifari Busra dan 2611531013")
