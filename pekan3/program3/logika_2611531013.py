@@ -3,7 +3,7 @@
 # Program ini menggunakan fungsi input()
 # Program operator logika dalam Python
 
-# Memamsukkan nilai Boolean 
+# Memasukkan nilai Boolean 
 # Input tidak peka terhadap huruf besar dan kecil 
 a1_1013 = input("input nilai boolean-1 (true/false): "). strip().lower() == "true"
 a2_1013 = input("input nilai boolean-2 (true/false): "). strip().lower() == "true"

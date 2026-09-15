@@ -19,27 +19,27 @@ print("Hasil =", hasil_1013)
 
 # Perkalian
 hasil_1013 = angka1_1013 * angka2_1013
-print("\nOperator Perkalian")=
+print("\nOperator Perkalian")
 print("Hasil =", hasil_1013)
 
 # Pembagian, Pembagian bilangan bulat, dan sisa bagi
 if angka2_1013 != 0:
-    hasil angkal_1013 / angka2_1013
+    hasil_1013 = angka1_1013 / angka2_1013
     print("\nOperator Pembagian")
     print("Hasil", hasil_1013)
 
-    hasil angkal_1013 // angka2_1013
+    hasil_1013 = angka1_1013 // angka2_1013
     print("\nOperator Pembagian Bulat")
     print("Hasil =", hasil_1013)
 
-    hasil angka1_1013 % angka2_1013
+    hasil_1013 = angka1_1013 % angka2_1013
     print("\nOperator Sisa Bagi")
     print("Hasil =", hasil_1013)
 else:
     print("Angka kedua tidak boleh bernilai 0.")
 
 # Pangkat
-hasil angka1_1013 ** angka2_1013
+hasil_1013 = angka1_1013 ** angka2_1013
 print("\nOperator Pangkat")
 print("Hasil =", hasil_1013)
 

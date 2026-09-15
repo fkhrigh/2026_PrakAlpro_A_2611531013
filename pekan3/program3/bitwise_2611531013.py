@@ -4,27 +4,55 @@
 
 print("\n===================================")
 print("3. OPERATOR BITWISE")
-print("===================================")
+print("===================================") 
 
-9 angkal int(input("Masukkan angka bitwise-1: "))
+angka1_1013 = int(input("Masukkan angka bitwise-1: "))
+angka2_1013 = int(input("Masukkan angka bitwise-2: "))
 
-10 angka2 int(input("Masukkan angka bitwise-2: "))
-
-11
 print("\nAngka dalam bentuk desimal dan biner")
-print("angka1", angkal, "biner", bin(angkal))
-print("angka2", angka2, "| biner", bin(angka2))
+print("angka1 =", angka1_1013, "| biner =", bin(angka1_1013))
+print("angka2 =", angka2_1013, "| biner =", bin(angka2_1013))
 
 #Bitwise AND
-hasil angkai & angka2
+hasil_1013 = angka1_1013 & angka2_1013
 print("\nBitwise AND (&)")
-print(angka1, "&", angka2, "=", hasil)
-print("Biner hasil", bin(hasil))
-print("Biner hasil (8 bit)", format (hasil, "08b"))
+print(angka1_1013, "&", angka2_1013, "=", hasil_1013)
+print("Biner hasil =", bin(hasil_1013))
+print("Biner hasil (8 bit) =", format(hasil_1013, "08b"))
 
 # Bitwise OR
-hasil angkal angka2
-print("\nBitwise OR (1)")
-print(angkal, "", angka2, "=", hasil)
-print("Biner hasil", bin(hasil))
-print("Biner hasil (8 bit)", format (hasil, "08b"))
+hasil_1013 = angka1_1013 | angka2_1013
+print("\nBitwise OR (|)")
+print(angka1_1013, "|", angka2_1013, "=", hasil_1013)
+print("Biner hasil =", bin(hasil_1013))
+print("Biner hasil (8 bit) =", format(hasil_1013, "08b"))
+
+# Bitwise XOR
+hasil_1013 = angka1_1013 ^ angka2_1013
+print("\nBitwise XOR (^)")
+print(angka1_1013, "^", angka2_1013, "=", hasil_1013)
+print("Biner hasil", bin(hasil_1013))
+print("Biner hasil (8 bit)", format(hasil_1013, "08b"))
+
+# Bitwise NOT
+hasil_1013 = ~angka1_1013
+print("\nBitwise NOT (~)")
+print("~", angka1_1013, "=", hasil_1013)
+print("Biner hasil =", bin(hasil_1013))
+print("Biner hasil (8 bit) =", format(hasil_1013, "08b"))
+
+# Bitwise geser kiri
+jumlah_geser_1013 = int(input("\nMasukkan jumlah pergeseran bit: "))
+
+hasil_1013 = angka1_1013 << jumlah_geser_1013
+print("\nBitwise geser kiri (<<)")
+print(angka1_1013, "<<", jumlah_geser_1013, "=", hasil_1013)
+print("Biner hasil =", bin(hasil_1013))
+print("Biner hasil (8 bit) =", format(hasil_1013, "08b"))
+
+# Bitwise geser kanan
+hasil_1013 = angka1_1013 >> jumlah_geser_1013
+print("\nBitwise geser kanan (>>)")
+print(angka1_1013, ">>", jumlah_geser_1013, "=", hasil_1013)
+print("Biner hasil =", bin(hasil_1013))
+print("Biner hasil (8 bit) =", format (hasil_1013, "08b"))
