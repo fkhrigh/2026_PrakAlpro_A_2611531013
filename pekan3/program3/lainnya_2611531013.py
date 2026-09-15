@@ -36,7 +36,7 @@ objek1_1013 = data_1013
 objek2_1013 = objek1_1013
 
 # objek3 memiliki isi sama, tetapi merupakan objek baru
-objek3_1013 = data.copy()
+objek3_1013 = data_1013.copy()
 
 
 print("objek1 =", objek1_1013)
