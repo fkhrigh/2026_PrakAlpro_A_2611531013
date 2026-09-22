@@ -30,7 +30,7 @@ if kode_promo_valid_1013:
     total_diskon_persen_1013 += 15 # Diskon voucher
 
 # Menghitung nominal diskon dan total bayar
-nominal_diskon_1013 = total_belanja_1013 (total_diskon_persen_1013 / 100)
+nominal_diskon_1013 = total_belanja_1013*(total_diskon_persen_1013 / 100)
 total_bayar_1013 = total_belanja_1013 - nominal_diskon_1013
 
 # Output hasil

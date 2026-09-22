@@ -8,4 +8,4 @@ ipk_1013 = float(input("Input IPK Anda = "))
 if ipk_1013 > 2.75:
         print("Anda Lulus Sangat Memuaskan Dengan IPK" + str(ipk_1013))
 
- print("Program Selesai")
+print("Program Selesai")
