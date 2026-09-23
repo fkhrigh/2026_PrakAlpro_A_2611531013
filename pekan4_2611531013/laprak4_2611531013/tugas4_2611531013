@@ -1,0 +1,113 @@
+# ==========================================
+# 1. HEADER DAN INPUT DATA PENGUNJUNG
+# ==========================================
+print("=== SISTEM LOKET ALPRO ADVENTURE PARK ===")
+nama_1013 = input("Masukkan Nama Pengunjung     : ")
+umur_1013 = int(input("Input Umur Anda              : "))
+is_simC_1013 = input("Apakah Anda Punya SIM C (y/t): ").strip().lower()[0]
+
+print("\nPilihan Paket Wahana (1-5)")
+print(" 1. Safari Rimba         (Rp 50,000)")
+print(" 2. Arung Jeram          (Rp 75,000)")
+print(" 3. Motor ATV Ekstrim    (Rp 120,000)")
+print(" 4. Roller Coaster Kilat (Rp 100,000)")
+print(" 5. All-Access VIP       (Rp 220,000)")
+
+
+# ==========================================
+# 2. PEMILIHAN PAKET WAHANA (MATCH-CASE)
+# ==========================================
+while True:
+    input_tiket_1013 = int(input("Masukkan nomor paket (1-5)     : "))
+
+    match input_tiket_1013:
+        case 1:
+            jenis_wahana_1013 = "Wahana Safari Rimba"
+            harga_1013 = 50000
+            break
+        case 2:
+            jenis_wahana_1013 = "Wahana Arung Jeram"
+            harga_1013 = 75000
+            break
+        case 3:
+            jenis_wahana_1013 = "Wahana Motor ATV Ekstrim"
+            harga_1013 = 120000
+            break
+        case 4:
+            jenis_wahana_1013 = "Wahana Roller Coaster Kilat"
+            harga_1013 = 100000
+            break
+        case 5:
+            jenis_wahana_1013 = "Wahana All-Access VIP"
+            harga_1013 = 220000
+            break
+        case _:
+            print("\nNomor Paket Tidak Valid. Silakan Pilih Kembali!")
+
+
+# ==========================================
+# 3. INPUT JUMLAH TIKET DAN STATUS TAMBAHAN
+# ==========================================
+while True:
+    jumlah_tiket_1013 = int(input("Masukkan jumlah tiket          : "))
+    if (jumlah_tiket_1013 > 0):
+        break
+    else:
+        print("\nJumlah Tiket Tidak Valid. Silakan Masukan Kembali!")
+
+is_member_1013 = input("Apakah Anda member? (y/t)      : ").strip().lower()[0]
+is_kode_1013 = input("Apakah kode promo valid? (y/t) : ").strip().lower()[0]
+
+is_kondisi_1013 = True
+total_diskon_1013 = 0
+
+
+# ==========================================
+# 4. VALIDASI KELAYAKAN PENGENDARA WAHANA
+# ==========================================
+print("\n--- KELAYAKAN PENGENDARA WAHANA ---")
+if (input_tiket_1013 == 3):
+    if (umur_1013 >= 17 and is_simC_1013 == "y"):
+        print(f"STATUS AKSES : Anda Sudah Dewasa dan Boleh Menaiki {jenis_wahana_1013} Sendiri.")
+    elif (umur_1013 >= 17 and is_simC_1013 != "y"):
+        print(f"STATUS AKSES : Anda Sudah Dewasa tetapi Tidak Boleh Menaiki {jenis_wahana_1013} Sendiri (Wajib Didampingi Instruktur).")
+    elif (umur_1013 < 17 and is_simC_1013 == "y"):
+        print(f"IDENTITAS TIDAK VALID: Belum Cukup Umur Memiliki SIM.")
+        is_kondisi_1013 = False
+    else:
+        print(f"Anda Belum Cukup Umur dan Tidak Boleh Menaiki {jenis_wahana_1013}.")
+        is_kondisi_1013 = False
+else:
+    if (umur_1013 >= 10):
+        print(f"STATUS AKSES : Batas Umur Tercukupi dan Anda Boleh Menaiki {jenis_wahana_1013}.")
+    else:
+        print(f"STATUS AKSES : Anda Tidak Cukup Umur dan Tidak Boleh Menaiki {jenis_wahana_1013}.")
+        is_kondisi_1013 = False
+
+
+# ==========================================
+# 5. AKUMULASI DISKON & RINCIAN PEMBAYARAN
+# ==========================================
+if is_kondisi_1013:
+    if (harga_1013 * jumlah_tiket_1013 >= 200000):
+        total_diskon_1013 += 10
+    if (is_member_1013 == "y"):
+        total_diskon_1013 += 5
+    if (is_kode_1013 == "y"):
+        total_diskon_1013 += 15
+    if (jumlah_tiket_1013 >= 5):
+        total_diskon_1013 += 5
+
+    print("\n--- Rincian Pembayaran ---")
+    print(f"Subtotal Belanja : Rp {harga_1013 * jumlah_tiket_1013:,.0f}")
+    print(f"Total Diskon     : {total_diskon_1013}% (Rp {(harga_1013 * jumlah_tiket_1013) * (total_diskon_1013 / 100):,.0f})")
+    print(f"Total Bayar       : Rp {(harga_1013 * jumlah_tiket_1013) - ((harga_1013 * jumlah_tiket_1013) * (total_diskon_1013 / 100)):,.0f}")
+    if ((harga_1013 * jumlah_tiket_1013) - ((harga_1013 * jumlah_tiket_1013) * (total_diskon_1013 / 100)) > 300000):
+            print("Selamat! Anda berhak mendapatkan Souvenir Gratis.")
+    print("Catatan Layanan  : Terima kasih telah berkunjung.")
+    
+
+# ==========================================
+# 6. PENUTUP PROGRAM
+# ==========================================
+print("\nProgram Selesai")
