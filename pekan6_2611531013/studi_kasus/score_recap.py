@@ -18,7 +18,7 @@ for j in range (1,student_count + 1):
 
     while True :
         score = int(input("Enter Score: "))
-        if 0 < score > 100:
+        if score < 0 or score > 100:
             print("Invalid Score ")
         else :
             break
